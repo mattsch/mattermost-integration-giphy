@@ -48,18 +48,18 @@ Here's how to start:
  3. Paste your Heroku domain into *Callback URLs*, making sure to add `http://` to the beginning and `/new_post` to the end so it looks similar to `http://myapp.heroku.com/new_post` and click **Add**
  4. Copy the *Token* from your newly created webhook that appears under the *Existing outgoing webhooks* section
  5. Go back to your Heroku app dashboard under the *Settings* tab. Under the *Config Variables* section, click **Reveal Config Vars**
- 6. Type `MATTERMOST_TOKEN` as the *KEY* and paste in the token you copied as the *VALUE*, and click **Add**
+ 6. Type `MATTERMOST_GIPHY_TOKEN` as the *KEY* and paste in the token you copied as the *VALUE*, and click **Add**
 
 4. **Connect your project to your Mattermost account for slash commands**
  1. Log in to your Mattermost account. Click the three dot menu at the top of the left-hand side and go to **Account Settings** > **Integrations** > **Slash Commands**
  2. Under *Add a new command*, enter `/gif` into **Command Trigger Word**
- 3. Paste your Heroku domain into *Callback URLs*, making sure to add `http://` to the beginning
+ 3. Paste your Heroku domain into *Callback URLs*, making sure to add `http://` to the beginning and `/new_post` to the end
  4. Select `POST` method
  5. (optional) Choose a username and icon url
  6. (optional) Check the autocomplete checkbox, add `[KEYWORD]` as the hint, `Returns a GIF from Giphy based on the keyword` as the description and `Get a GIF from Giphy` as the descriptive label
  7. Copy the *Token* from your newly created slash command that appears under the *Existing commands* section
  8. Go back to your Heroku app dashboard under the *Settings* tab. Under the *Config Variables* section, click **Reveal Config Vars**
- 9. Type `MATTERMOST_TOKEN` as the *KEY* and paste in the token you copied as the *VALUE*, and click **Add**
+ 9. Type `MATTERMOST_GIPHY_TOKEN` as the *KEY* and paste in the token you copied as the *VALUE*, and click **Add**
 
 That's it! Waiting a few minutes for the Heroku process to restart you should be able to type `gif: hello` or `/gif hello` into any channel and see a GIF from Giphy's translate service.
 
@@ -93,7 +93,7 @@ Here's how to start:
 3. **Set up your Mattermost slash command**
  1. Log in to your Mattermost account. Click the three dot menu at the top of the left-hand side and go to **Account Settings** > **Integrations** > **Slash Commands**
  2. Under *Add a new command*, enter `/gif` into **Command Trigger Word**
- 3. Paste your Web Server domain into *Callback URLs*, making sure to add `http://` to the beginning
+ 3. Paste your Web Server domain into *Callback URLs*, making sure to add `http://` to the beginning and `/new_post` to the end
  4. Select `POST` method
  5. (optional) Choose a username and icon url
  6. (optional) Check the autocomplete checkbox, add `[KEYWORD]` as the hint, `Returns a GIF from Giphy based on the keyword` as the description and `Get a GIF from Giphy` as the descriptive label
